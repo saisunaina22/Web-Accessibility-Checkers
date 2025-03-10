@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Accessibility Checker - Scan your website for WCAG compliance and get detailed reports">
+    <title>Website Accessibility Checker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            color: white;
+            text-align: center;
+        }
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-links li {
+            display: inline;
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: yellow;
+        }
+        .hero {
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        #website-url {
+            padding: 10px;
+            width: 60%;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        .cta-button {
+            padding: 12px 20px;
+            background: yellow;
+            color: black;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .cta-button:hover {
+            transform: scale(1.1);
+        }
+        .features {
+            padding: 50px 20px;
+            background: white;
+            color: black;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .feature-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .feature-card {
+            background: #f3f3f3;
+            padding: 20px;
+            width: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+        .contact {
+            padding: 50px 20px;
+            background: #2196F3;
+        }
+        .contact h2 {
+            font-size: 28px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        .submit-button {
+            padding: 12px;
+            background: yellow;
+            color: black;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .submit-button:hover {
+            transform: scale(1.1);
+        }
+        footer {
+            padding: 20px;
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html" class="logo-text">AccessibilityChecker</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Make Your Website Accessible to Everyone</h1>
+                <p>Scan your website for WCAG compliance and get detailed reports with actionable recommendations.</p>
+                
+                <form id="waveForm" action="https://wave.webaim.org/report" method="GET" target="_blank">
+                    <input type="url" id="website-url" name="url" placeholder="Enter website URL" required>
+                    <button type="submit" class="cta-button">Scan with WAVE</button>
+                </form>
+            </div>
+        </section>
+        <section id="features" class="features">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🎯 WCAG Compliance</h3>
+                    <p>Scans for WCAG 2.1 AA standards.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Detailed Reports</h3>
+                    <p>Provides insights on accessibility issues.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💡 AI-Powered Fixes</h3>
+                    <p>Get smart recommendations.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔍 Real-time Analysis</h3>
+                    <p>Instant feedback while editing.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 AccessibilityChecker. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
